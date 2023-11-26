@@ -5,6 +5,13 @@
     text-decoration: none;
 }
 
+
+:root {
+    --colorPrincipal: rgb(210, 218, 58);
+    --colorSecundario: #171717;
+}
+
+
 html {
     scroll-behavior: smooth;
     background-color: #f8f4f4;
@@ -22,7 +29,7 @@ main {
 .nav_superior {
     display: flex;
     align-items: center;
-    background: #d38037;
+    background: var(--colorPrincipal);
     flex-direction: row;
     justify-content: space-between;
     padding-right: 30px;
@@ -31,16 +38,16 @@ main {
 li {
     list-style: none;
     padding: 10px;
-    color: #260e04;
+    color: #042605;
 }
 
 .nav_ul>p:hover,
 li:hover {
-    color: #963975;
+    color: #6f7f21;
 }
 
 .nav_superior>p:hover {
-    color: #963975;
+    color: #6f7f21;
 }
 
 
@@ -53,7 +60,7 @@ li:hover {
     padding: 6px 30px;
     font-size: 25px;
     text-align: right;
-    background: #ffcdd2;
+    background: var(--colorSecundario);
 }
 
 .nav_ul {
@@ -68,9 +75,19 @@ li:hover {
     margin-top: 30px;
     margin-left: 9px;
     width: 100%;
-    background: #c8e6c9;
+    background: var(--colorPrincipal);
     padding: 15px;
     transition: all .8s;
+}
+
+
+.nav_button_container .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    color: #fff;
 }
 
 img {
@@ -96,7 +113,7 @@ img {
 }
 
 .carta {
-    border: 3px solid #c8e6c9;
+    border: 3px solid var(--colorPrincipal);
     border-radius: 10px;
     text-align: center;
     display: block;
@@ -115,7 +132,7 @@ aside {
     width: 15%;
     float: right;
     text-align: center;
-    background: #c8e6c9;
+    background: var(--colorPrincipal);
     padding: 35px 0px;
     margin-top: 38px;
 }
@@ -137,14 +154,14 @@ aside {
 
     .nav {
         display: flex;
-        background: #ffcdd2;
+        background: var(--colorSecundario);
         flex-direction: row-reverse;
         padding: 10px 15px;
         height: 45px;
     }
 
     .nav_ul_responsive li {
-        background: #c8e6c9;
+        background: var(--colorPrincipal);
         font-size: calc(15px + .2vw);
         width: 100%;
         padding: 15px 40px;
@@ -174,7 +191,7 @@ aside {
         position: relative;
         top:-1000px;
         height: calc(100vh - 64px);
-        background: #c8e6c9;
+        background: var(--colorPrincipal);
         transition: all 1s;
         z-index: 1;
         width:75%;
@@ -191,7 +208,7 @@ aside {
         padding: 6px 20px;
         font-size: 25px;
         text-align: right;
-        background: #ffcdd2;
+        background: var(--colorSecundario);
         margin-top: -74px;
         z-index: 100;
     }
@@ -226,7 +243,7 @@ aside {
     }
 
     .carta {
-        border: 3px solid #c8e6c9;
+        border: 3px solid var(--colorPrincipal);
         border-radius: 10px;
         text-align: center;
         display: block;
